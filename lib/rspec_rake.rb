@@ -1,5 +1,7 @@
 require "rspec_rake/version"
 
 module RSpecRake
-  # Your code goes here...
+  class << self
+    attr_accessor :auto_reenable
+  end
 end
