@@ -1,3 +1,5 @@
+require 'rake'
+
 module Rake
   class Task
     alias_method :old_invoke, :invoke
