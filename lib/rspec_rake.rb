@@ -1,5 +1,5 @@
-require "rspec_rake/version"
-require_relative "rake/task"
+require 'rspec_rake/version'
+require_relative 'rake/task'
 
 module RSpecRake
   class << self
