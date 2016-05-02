@@ -14,8 +14,20 @@ gem install rspec_rake
 ```
 
 ## Usage
+Write configuration for rake tests in your `rails_helper.rb` or `spec_helper.rb`
+```ruby
+RSpecRake.configure do |config|
+  config.require_tasks(File.join('your', 'rake-task', 'dir-path'))
+  config.auto_reenable = true # Optinal
+end
+```
 
-TODO: Write usage instructions here
+#### `.auto_reenable` is what?
+`Rake::Task` can invoke task **only 1 time** because it has `#already_invoked` flag.
+But we often want to invoke more in specs.
+So if you want to invoke more than 1 time, use `auto_reenable` option.
+
+Be careful your specs doesn't go infinite loop :smiling_imp:
 
 ## Contributing
 
