@@ -1,5 +1,7 @@
 # RspecRake
 
+[![Build Status](https://travis-ci.org/bakunyo/rspec_rake.svg?branch=develop)](https://travis-ci.org/bakunyo/rspec_rake)
+
 ## Description
 RSpecRake makes easier to configure rspec of rake tasks.
 
