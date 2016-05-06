@@ -6,7 +6,7 @@
 [![Test Coverage](https://codeclimate.com/github/bakunyo/rspec_rake/badges/coverage.svg)](https://codeclimate.com/github/bakunyo/rspec_rake/coverage)
 
 ## Description
-RSpecRake makes easier to configure rspec of rake tasks.
+RSpecRake makes easier to configure rspec for rake tasks.
 
 ## Installation
 ```

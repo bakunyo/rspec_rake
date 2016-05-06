@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["izuta.hiroyuki@gmail.com"]
 
   spec.summary       = "RSpec settings for Rake task."
-  spec.description   = "Makes easier to configure rspec of rake tasks."
+  spec.description   = "Makes easier to configure rspec for rake tasks."
   spec.homepage      = "https://github.com/bakunyo/rspec_rake"
   spec.license       = "MIT"
 
