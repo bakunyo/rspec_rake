@@ -22,12 +22,26 @@ RSpecRake.configure do |config|
 end
 ```
 
-#### `.auto_reenable` is what?
+### .auto_reenable is what?
 `Rake::Task` can invoke task **only 1 time** because it has `#already_invoked` flag.
 But we often want to invoke more in specs.
 So if you want to invoke more than 1 time, use `auto_reenable` option.
 
 Be careful your specs doesn't go infinite loop :smiling_imp:
+
+### With Rails
+```ruby
+# in rails_helper
+RSpecRake.configure do |config|
+  config.require_tasks(File.join(Rails.root, 'lib', 'tasks')) # or Rails.application.load_tasks
+  config.auto_reenable = true # Optinal
+end
+
+# in specs, Rake::Task can call everywhere
+before  { Rake::Task['some:task'].invoke }
+subject { Rake::Task['some:task'].invoke }
+after   { Rake::Task['some:task'].invoke }
+```
 
 ## Contributing
 
